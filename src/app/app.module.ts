@@ -10,22 +10,29 @@ import { WebScrapingComponent } from './web-scraping/web-scraping.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
+
+const routes :Routes = [{path: 'Login', component: LoginComponent},
+{path: 'web-scraping', component: WebScrapingComponent},
+{path: '', redirectTo: '/Login', pathMatch: 'full'},
+
+]
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     WebScrapingComponent,
-    NavbarComponent
+    NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {path: 'Login', component: LoginComponent},
-      {path: '', redirectTo: '/Login', pathMatch: 'full'},
+ 
 
-    ]),
+    RouterModule.forRoot(
+      routes,)
   ],
 
   providers: [],
