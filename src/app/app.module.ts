@@ -8,13 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { WebScrapingComponent } from './web-scraping/web-scraping.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 const routes :Routes = [{path: 'Login', component: LoginComponent},
 {path: 'web-scraping', component: WebScrapingComponent},
 {path: '', redirectTo: '/Login', pathMatch: 'full'},
-
+{path: 'home', component: HomeComponent}
 ]
 
 @NgModule({
@@ -24,12 +25,13 @@ const routes :Routes = [{path: 'Login', component: LoginComponent},
     HomeComponent,
     WebScrapingComponent,
     NavbarComponent,
+    FooterComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
- 
+
 
     RouterModule.forRoot(
       routes,)
