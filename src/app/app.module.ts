@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RecomendationComponent } from './components/recomendation/recomendation.component';
+import { ModelComponent } from './components/model/model.component';
 // import {MatButtonModule} from '@angular/material/button';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatDialog, MatDialogModule} from '@angular/material/dialog';
@@ -21,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 const routes :Routes = [{path: 'Login', component: LoginComponent},
 {path: 'web-scraping', component: WebScrapingComponent},
 {path: '', redirectTo: '/Login', pathMatch: 'full'},
-{path: 'home', component: HomeComponent}
+{path: 'home', component: HomeComponent},
+{path: 'train-model', component: ModelComponent}
 ]
 
 @NgModule({
@@ -32,6 +35,8 @@ const routes :Routes = [{path: 'Login', component: LoginComponent},
     WebScrapingComponent,
     NavbarComponent,
     FooterComponent,
+    RecomendationComponent,
+    ModelComponent,
 
 
   ],
@@ -40,7 +45,7 @@ const routes :Routes = [{path: 'Login', component: LoginComponent},
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
- 
+
 
 
 
